@@ -11,7 +11,7 @@ import json
 class UpdateChecker:
     def __init__(self, page: ft.Page):
         self.page = page
-        self.page.title = "XC Update Checker"
+        self.page.title = "KayoVPN"
         self.page.theme_mode = self.read_settinng("theme")
         self.page.window_resizable = False
         self.update_available = False
@@ -155,7 +155,7 @@ class UpdateChecker:
             self.page.dialog = None
             self.page.update()
 
-        self.page.title = "XC (Xray-Client)"
+        self.page.title = "KayoVPN XC"
         self.page.window_resizable = True
         self.page.update()
 
@@ -257,7 +257,7 @@ def main(page: ft.Page):
     update_checker.update_window = page.window
     update_checker.check_ver()
 
-    page.title = "XC (Xray-Client)"
+    page.title = "KayoVPN XC"
     page.window_resizable = True
     page.update()
 

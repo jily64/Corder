@@ -16,13 +16,13 @@ def os_det():
 OS_SYS = os_det()
 
 XRAY_PATH=f"./core/{OS_SYS}/xray"
-APP_VERSION = "4.3-11"
+APP_VERSION = "1.0-xc4.3"
 ROOT = "./"
 CORE_PATH = "./core"
 SAVE_PATH = "./core.zip"
 URL_CHECK = f'https://netplusshop.ir/core/{OS_SYS}/index.html'
 DOWNLOAD_URL = f'https://netplusshop.ir/core/{OS_SYS}/core.zip'
-REPO_URL = "https://github.com/wikm360/xray-client/releases/latest"
+REPO_URL = "https://github.com/jily64/Corder/releases/latest"
 PROXY_IP  =  "127.0.0.1"
 PROXY_PORT = 1080
 API = "127.0.0.1:10085"

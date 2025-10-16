@@ -495,7 +495,7 @@ class XrayBackend:
                     print("Restarting with admin privileges...")
                     if run_as_admin_windows():
                         self.log("Successfully restarted with admin privileges.")
-                        # sys.exit(0)
+                        sys.exit(0)
                         self.close_event.set()
                     else:
                         self.log("Failed to start with Admin")

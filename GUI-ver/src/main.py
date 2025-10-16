@@ -15,7 +15,7 @@ class XrayClientUI:
     def __init__(self, page: ft.Page):
         self.page = page
         self.backend = XrayBackend()
-        self.page.title = "XC (Xray-Client)"
+        self.page.title = "KayoVPN"
         self.page.theme_mode = self.read_settinng("theme")
         self.debug_mod = self.read_settinng("debug")
         self.theme_color = self.change_theme_color(self.read_settinng("theme_color"))
@@ -65,7 +65,7 @@ class XrayClientUI:
         confirm_dialog = ft.AlertDialog(
             modal=True,
             title=ft.Text("Please confirm"),
-            content=ft.Text("Do you really want to exit XC ?"),
+            content=ft.Text("Do you really want to exit KayoVPN ?"),
             actions=[
                 ft.ElevatedButton("Yes", on_click=yes_click),
                 ft.OutlinedButton("No", on_click=no_click),
@@ -82,7 +82,7 @@ class XrayClientUI:
             "theme": "dark",
             "theme_color": "blue",
             "debug": "off",
-            "useragent": "XC(Xray-Client)"
+            "useragent": "KayoVPN"
         }
         if os.path.exists("./setting.json"):
             with open("./setting.json", "r") as file:
@@ -145,7 +145,7 @@ class XrayClientUI:
             "theme": "dark",
             "theme_color": "blue",
             "debug": "off",
-            "useragent": "XC(Xray-Client)"
+            "useragent": "KayoVPN"
         }
         if os.path.exists("./setting.json"):
             with open("./setting.json", "r") as file:
@@ -234,12 +234,12 @@ class XrayClientUI:
                 content=ft.Column([
                     ft.Row([
                         ft.Icon(ft.Icons.BOLT, size=30, color=ft.Colors.BLUE),
-                        ft.Text("XC (Xray-Client)", size=28, weight=ft.FontWeight.BOLD),
+                        ft.Text("KayoVPN XC", size=28, weight=ft.FontWeight.BOLD),
                     ], alignment=ft.MainAxisAlignment.CENTER),
                     ft.Container(height=10),
                     ft.Row(
                         [
-                            ft.Text(f"XC Version: {self.backend.version}", size=16),
+                            ft.Text(f"KayoVPN: {self.backend.version}", size=16),
                             ft.Container(width=20),
                             ft.Text(f"Xray Version: {self.backend.xray_version}", size=16),
                         ] + ([
@@ -396,7 +396,7 @@ class XrayClientUI:
             self.add_profile_tab(profile)
 
         self.page.add(header, self.tabs)
-        self.log("XC - Created By wikm , 3ircle with ❤️")
+        self.log("Proxy is not started yet")
         self.check_for_updates()
 
 
@@ -623,7 +623,7 @@ class XrayClientUI:
 
         useragent_dropdown = ft.Dropdown(
             options=[
-                ft.dropdown.Option("XC(Xray-Client)"),
+                ft.dropdown.Option("KayoVPN"),
                 ft.dropdown.Option("v2rayNG/1.9.16"),
             ],
             value=self.useragent,
@@ -725,7 +725,7 @@ class XrayClientUI:
 
     def open_github(self):
         import webbrowser
-        webbrowser.open("https://github.com/wikm360/xray-client")
+        webbrowser.open("https://github.com/jily64/Corder")
 
 
 
@@ -902,7 +902,7 @@ class XrayClientUI:
 
     def select_config(self, config, profile):
         self.selected_config = config
-        self.selected_profile = profile  # ذخیره نام پروفایل
+        self.selected_profile = profile
         try:
             config_index = int(config.split("-")[0])
             with open(f"./core/{self.backend.os_sys}/select.txt", "w") as f:

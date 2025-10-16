@@ -9,8 +9,8 @@ gui/test_2.py
 core/linux/select.txt
 gui/test3.py
 GUI-ver/test.py
-subs/3ircle
-GUI-ver/subs/3ircle
+subs/Mr.Admin
+GUI-ver/subs/Mr.Admin
 core/win/select.txt
 subs/
 *.log
@@ -19,3 +19,5 @@ core/win/select.txt
 custom config V2rayNG.json
 GUI-ver/build
 /myenv
+.venv
+GUI-ver/src/__pycache__
